@@ -1,6 +1,6 @@
 import importlib
 import inspect
-import logging
+from loguru import logger
 from pathlib import Path
 from typing import Type, List
 
@@ -8,7 +8,7 @@ from aiogram_dialog import Dialog
 
 from .auto_register import AutoRegister
 
-logger = logging.getLogger(__name__)
+
 
 
 class DialogCollector:
@@ -53,5 +53,5 @@ class DialogCollector:
     @classmethod
     def collect(cls, package_path: str) -> List[Dialog]:
         """Собирает все диалоги в проекте."""
-        dialog_classes = cls.find_auto_register_classes(package_path)
+        dialog_classes = set(cls.find_auto_register_classes(package_path))
         return [dialog_class.get_dialog() for dialog_class in dialog_classes]

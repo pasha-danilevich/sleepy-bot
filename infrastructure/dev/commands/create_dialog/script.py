@@ -12,20 +12,24 @@ from config import BASE_PATH
 from .templates.base import *
 from .templates.with_dto import *
 
-MODULES = ['dialog', 'getters', 'handlers', 'state']
+MODULES = ['__init__', 'dialog', 'getters', 'handlers', 'state', 'windows']
 
 MODULE_TEMPLATE_MAP = {
+    '__init__': '',
     'dialog': DIALOG,
     'getters': GETTERS,
     'handlers': HANDLERS,
     'state': STATE,
+    'windows': WINDOWS
 }
 
 MODULE_TEMPLATE_WITH_DTO_MAP = {
+    '__init__': '',
     'dialog': DIALOG_WITH_DTO,
     'getters': GETTERS_WITH_DTO,
     'handlers': HANDLERS_WITH_DTO,
     'state': STATE,
+    'windows': WINDOWS
 }
 
 

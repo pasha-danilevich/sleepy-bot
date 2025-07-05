@@ -5,13 +5,12 @@ from aiogram_dialog import DialogManager
 from dishka import FromDishka
 from dishka.integrations.aiogram import inject
 
-from bot.dialogs.home.dialog import HomeDialog
+from bot.dialogs.start.dialog import StartDialog
 
 router = Router()
 
 
 @router.message(CommandStart())
 @inject
-async def start_cmd(message: Message, dialog_manager: DialogManager, home_dialog: FromDishka[HomeDialog]):
-    user_id = message.from_user.id
-    await home_dialog.start(dialog_manager)
+async def start_cmd(message: Message, dialog_manager: DialogManager, dialog: FromDishka[StartDialog]):
+    await dialog.start(dialog_manager)

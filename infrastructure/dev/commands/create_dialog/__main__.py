@@ -1,6 +1,6 @@
 """
 Используйте команду:
-python -m bot.core.commands.create_dialog --name {name} --folder {folder} --use_dto {(true/false или 1/0)}
+python -m infrastructure.dev.commands.create_dialog --name {name} --folder {folder} --use_dto {(true/false или 1/0)}
 """
 
 

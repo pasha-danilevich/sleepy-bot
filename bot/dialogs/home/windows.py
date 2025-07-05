@@ -1,15 +1,17 @@
+
 from aiogram_dialog import Window
-from aiogram_dialog.widgets.kbd import Button, Row
+from aiogram_dialog.widgets.kbd import Row
 from aiogram_dialog.widgets.text import Const
 
 from .state import HomeSG
 
+from ..tracking.dialog import TrackingDialog
+
 windows = [
-Window(
-        Const("🏠 Главное меню"),
+    Window(
+        Const("Каждый день ты можешь отмечать время отхода ко сну и пробуждение."),
         Row(
-            Button(Const("📊 Статистика"), id="stats_btn"),
-            Button(Const("⏰ Трек сна"), id="track_btn"),
+            TrackingDialog().start_button('⏰ Трек сна'),
         ),
         state=HomeSG.start,
     )

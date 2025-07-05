@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 import subprocess
 import sys
 from pathlib import Path
-
+from loguru import logger
 
 def save_git_diff():
     # Получаем вывод git diff (универсальный способ для всех ОС)
@@ -16,19 +15,19 @@ def save_git_diff():
     )
 
     if result.returncode != 0:
-        print("Ошибка при выполнении git diff:")
-        print(result.stderr)
+        logger.error("Ошибка при выполнении git diff:")
+        logger.error(result.stderr)
         return
 
     # Создаем путь к файлу (кросс-платформенный способ)
-    output_file = Path(__file__).resolve().parent / "git_diff_output.txt"
-
+    output_path = Path(__file__).resolve().parent / 'output'
+    path = Path(output_path, "prompt.txt")
     # Записываем вывод в файл с явным указанием кодировки
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(path, 'w', encoding='utf-8') as f:
         prompt = (
             "Задача:\n"
             "Напиши комментарий к моему commit используя следующую структуру:\n"
-            "{краткое название commit`а, описывающее все суть}\n"
+            "{краткое название commit`а, описывающее всю суть}\n"
             "{символ каретки для отступа (enter)}\n"
             "{пункты изменений (начинаются с дефиса)}\n"
             "СВОЙ ОТВЕТ НАПИШИ В code формате на русском языке\n\n"
@@ -37,8 +36,5 @@ def save_git_diff():
         diff_text = result.stdout
         f.write(prompt + diff_text)
 
-    print(f"Вывод git diff сохранён в {output_file}")
+    logger.success(f"Вывод git diff сохранён в {path}")
 
-
-if __name__ == "__main__":
-    save_git_diff()
