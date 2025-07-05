@@ -100,7 +100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2qzkWoQyIYSuUem1KHMB" name="home">
-    <mxGraphModel dx="1403" dy="2985" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3366" dy="3890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -507,7 +507,7 @@
         <mxCell id="vgeHuzVfBsbmiKzCboVu-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-35" target="vgeHuzVfBsbmiKzCboVu-39">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <object label="Записать" Button="button" id="vgeHuzVfBsbmiKzCboVu-35">
+        <object label="Записать сновидение" Button="button" id="vgeHuzVfBsbmiKzCboVu-35">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
             <mxGeometry x="520" y="370" width="290" height="30" as="geometry" />
           </mxCell>

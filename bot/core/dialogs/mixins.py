@@ -9,12 +9,13 @@ from aiogram_dialog.widgets.text import Const
 class SimpleStart(ABC):
     @property
     @abstractmethod
-    def start_state(self) -> State:
+    def _start_state(self) -> State:
         raise NotImplementedError
 
-
     async def start(self, manager: DialogManager, mode: StartMode = StartMode.NORMAL) -> None:
-        await manager.start(self.start_state, mode=mode)
+        await manager.start(self._start_state, mode=mode)
 
     def start_button(self, btn_text: str) -> Start:
-        return Start(Const(btn_text), id='start', state=self.start_state)
+        return Start(
+            Const(btn_text), id=f'start_{self.__class__.__name__}', state=self._start_state
+        )
