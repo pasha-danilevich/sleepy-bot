@@ -1,6 +1,6 @@
 from aiogram import Dispatcher
-from tg_bot.middlewares.callback_logger import CallbackLoggerMiddleware
-from tg_bot.middlewares.errors_middleware import ErrorMiddleware
+from .callback_logger import CallbackLoggerMiddleware
+from .errors_middleware import ErrorMiddleware
 
 
 def register_middlewares(dp: Dispatcher):

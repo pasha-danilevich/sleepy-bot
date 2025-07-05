@@ -7,7 +7,7 @@ from aiogram_dialog.api.protocols import (
     MessageManagerProtocol,
 )
 
-from .custom_dialog_manager import CustomDialogManagerImpl
+from bot.core.dialog_manager.custom_dialog_manager import DialogManagerWithDTO
 
 
 class ManagerFactory(DialogManagerFactory):
@@ -25,8 +25,8 @@ class ManagerFactory(DialogManagerFactory):
         data: dict,
         registry: DialogRegistryProtocol,
         router: Router,
-    ) -> CustomDialogManagerImpl:
-        return CustomDialogManagerImpl(
+    ) -> DialogManagerWithDTO:
+        return DialogManagerWithDTO(
             event=event,
             data=data,
             message_manager=self.message_manager,

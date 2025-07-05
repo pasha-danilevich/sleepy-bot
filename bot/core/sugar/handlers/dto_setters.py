@@ -8,9 +8,9 @@ from aiogram.fsm.state import State
 from aiogram.types import CallbackQuery
 from aiogram_dialog import Data
 from aiogram_dialog.widgets.kbd.button import Button, OnClick
-from aiogram_dialog.widgets.kbd.select import Multiselect, OnItemClick
-from aiogram_dialog_survey.widgets import Select
-from tg_bot.core.dialog_manager.custom_dialog_manager import DialogManagerWithDTO
+from aiogram_dialog.widgets.kbd.select import Multiselect, OnItemClick, Select
+
+from bot.core.dialog_manager.custom_dialog_manager import DialogManagerWithDTO
 
 
 class SetterForButton:
