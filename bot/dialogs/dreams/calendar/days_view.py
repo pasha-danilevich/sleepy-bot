@@ -6,7 +6,9 @@ from aiogram_dialog.widgets.kbd.calendar_kbd import CalendarDaysView, raw_from_d
 from aiogram_dialog.widgets.text import Format
 
 
-class CustomCalendarDaysView(CalendarDaysView):
+class MarkSpecialCalendarDaysView(CalendarDaysView):
+    SPECIAL_DAYS_TEXT = Format("💤 {date:%d}")
+
     async def _render_date_button(
         self,
         selected_date: date,
@@ -24,7 +26,7 @@ class CustomCalendarDaysView(CalendarDaysView):
         if selected_date == today:
             text = self.today_text
         elif selected_date in special_dates:  # Проверяем, есть ли дата в списке
-            text = Format("💤 {date:%d}")
+            text = self.SPECIAL_DAYS_TEXT
         else:
             text = self.date_text
 
