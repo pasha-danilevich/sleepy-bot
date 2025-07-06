@@ -5,11 +5,11 @@ from functools import partial
 from typing import Literal, Union
 
 from aiogram.fsm.state import State
-from aiogram.types import CallbackQuery, Message
+from aiogram.types import CallbackQuery
 from aiogram_dialog import Data, DialogManager
-from aiogram_dialog.widgets.input import ManagedTextInput, TextInput
+from aiogram_dialog.widgets.input import TextInput
 from aiogram_dialog.widgets.input.text import OnSuccess
-from aiogram_dialog.widgets.kbd import Button, Multiselect, Select
+from aiogram_dialog.widgets.kbd import Button, Multiselect
 from aiogram_dialog.widgets.kbd.button import OnClick
 from aiogram_dialog.widgets.kbd.select import OnItemClick
 
@@ -34,7 +34,7 @@ class SetterForButton:
         manager.dialog_data[key] = value
 
 
-class SetterForSelect:
+class SetterForSelected:
     """Установить значение по ключу в dialog_data
     Значение установится в зависимости от нажатой кнопки.
     Производит переключение между окнами или диалогами"""
@@ -97,7 +97,7 @@ class SetterForMultiselect:
         manager.dialog_data[key] = selected
 
 
-class TextInputWithSetter(TextInput, SetterForSelect):
+class TextInputWithSetter(TextInput, SetterForSelected):
     def __init__(self, key: str, event_type: Literal['start', 'switch'], state: State):
         super().__init__(
             id=f'text_input_{key}',
@@ -107,4 +107,3 @@ class TextInputWithSetter(TextInput, SetterForSelect):
                 state=state,
             ),
         )
-

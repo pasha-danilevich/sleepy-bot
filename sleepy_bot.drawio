@@ -100,7 +100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2qzkWoQyIYSuUem1KHMB" name="home">
-    <mxGraphModel dx="3366" dy="3890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1980" dy="3251" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -143,34 +143,34 @@
             <mxGeometry x="750" y="201" width="250" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="q68d5dB68wahpiqJsPmr-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="q68d5dB68wahpiqJsPmr-36" target="q68d5dB68wahpiqJsPmr-37" parent="7MFOfIwg_OBIdNo513Zt-30">
+        <mxCell id="q68d5dB68wahpiqJsPmr-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="7MFOfIwg_OBIdNo513Zt-30" source="q68d5dB68wahpiqJsPmr-36" target="q68d5dB68wahpiqJsPmr-37" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Записать сновидение" Button="button" id="q68d5dB68wahpiqJsPmr-36">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="7MFOfIwg_OBIdNo513Zt-30">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="7MFOfIwg_OBIdNo513Zt-30" vertex="1">
             <mxGeometry x="400" y="241" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="q68d5dB68wahpiqJsPmr-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="7MFOfIwg_OBIdNo513Zt-30" source="q68d5dB68wahpiqJsPmr-38" target="q68d5dB68wahpiqJsPmr-39">
+        <mxCell id="q68d5dB68wahpiqJsPmr-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="7MFOfIwg_OBIdNo513Zt-30" source="q68d5dB68wahpiqJsPmr-38" target="q68d5dB68wahpiqJsPmr-39" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Мои сновидения" Button="button" id="q68d5dB68wahpiqJsPmr-38">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="7MFOfIwg_OBIdNo513Zt-30">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" parent="7MFOfIwg_OBIdNo513Zt-30" vertex="1">
             <mxGeometry x="550" y="241" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="RECORD_DREAM_DIALOG" StartDialog="start_dialog" id="q68d5dB68wahpiqJsPmr-37">
-          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;" vertex="1" parent="7MFOfIwg_OBIdNo513Zt-30">
+          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;" parent="7MFOfIwg_OBIdNo513Zt-30" vertex="1">
             <mxGeometry x="120" y="241" width="250" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="DREAMS_DIALOG" StartDialog="start_dialog" id="q68d5dB68wahpiqJsPmr-39">
-          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;" vertex="1" parent="7MFOfIwg_OBIdNo513Zt-30">
+          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;" parent="7MFOfIwg_OBIdNo513Zt-30" vertex="1">
             <mxGeometry x="750" y="241" width="250" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Оценить качество сна" Button="button" id="vgeHuzVfBsbmiKzCboVu-31">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="7MFOfIwg_OBIdNo513Zt-30">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillStyle=auto;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="7MFOfIwg_OBIdNo513Zt-30" vertex="1">
             <mxGeometry x="400" y="281" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
@@ -237,289 +237,312 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9nVMyrlUef0i2OySYrvu-5" value="&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;Собрать нужную инфу&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="tSt1m1aS4Q9cjYLJCjKo-28">
+        <mxCell id="9nVMyrlUef0i2OySYrvu-5" value="&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;Собрать нужную инфу&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="tSt1m1aS4Q9cjYLJCjKo-28" vertex="1">
           <mxGeometry x="650" y="320" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="q68d5dB68wahpiqJsPmr-1" value="TRACKING_DIALOG" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="q68d5dB68wahpiqJsPmr-1" value="TRACKING_DIALOG" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1480" y="-2160" width="1400" height="840" as="geometry" />
         </mxCell>
         <object label="Выберите действие:" Window="window" id="q68d5dB68wahpiqJsPmr-2">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="500" y="90" width="290" height="50" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="q68d5dB68wahpiqJsPmr-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-4" target="q68d5dB68wahpiqJsPmr-11">
+        <mxCell id="q68d5dB68wahpiqJsPmr-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-4" target="q68d5dB68wahpiqJsPmr-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Иду спать" Button="button" id="q68d5dB68wahpiqJsPmr-4">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="650" y="150" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="start" State="state" id="q68d5dB68wahpiqJsPmr-5">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="660" y="70" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="q68d5dB68wahpiqJsPmr-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-7" target="q68d5dB68wahpiqJsPmr-17">
+        <mxCell id="q68d5dB68wahpiqJsPmr-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-7" target="q68d5dB68wahpiqJsPmr-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Проснулся" Button="button" id="q68d5dB68wahpiqJsPmr-7">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="500" y="150" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Назад" Button="button" id="q68d5dB68wahpiqJsPmr-10">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="500" y="190" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Хорошо, записал. Спокойной ночи *генерировать разные сообщения*" Window="window" id="q68d5dB68wahpiqJsPmr-11">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="900" y="200" width="290" height="50" as="geometry" />
           </mxCell>
         </object>
         <object label="sleep" State="state" id="q68d5dB68wahpiqJsPmr-13">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="1060" y="180" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
         <object label="На главную" Button="button" id="q68d5dB68wahpiqJsPmr-15">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="900" y="260" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="q68d5dB68wahpiqJsPmr-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-23" target="q68d5dB68wahpiqJsPmr-28">
+        <mxCell id="q68d5dB68wahpiqJsPmr-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-23" target="q68d5dB68wahpiqJsPmr-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Доброе утро.&lt;div&gt;Вы спали: {sleep_delta}&lt;/div&gt;" Window="window" id="q68d5dB68wahpiqJsPmr-17">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="380" y="340" width="290" height="50" as="geometry" />
           </mxCell>
         </object>
         <object label="wakeup" State="state" id="q68d5dB68wahpiqJsPmr-18">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="540" y="320" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
         <object label="На главную" Button="button" id="q68d5dB68wahpiqJsPmr-19">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="380" y="440" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Оценить качество сна" Button="button" id="q68d5dB68wahpiqJsPmr-23">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="530" y="400" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="q68d5dB68wahpiqJsPmr-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-24" target="q68d5dB68wahpiqJsPmr-25">
+        <mxCell id="q68d5dB68wahpiqJsPmr-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-24" target="q68d5dB68wahpiqJsPmr-25" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Записать сновидение" Button="button" id="q68d5dB68wahpiqJsPmr-24">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="380" y="400" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="RECORD_DREAM_DIALOG" StartDialog="start_dialog" id="q68d5dB68wahpiqJsPmr-25">
-          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="100" y="400" width="250" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Выберите оценку:" Window="window" id="q68d5dB68wahpiqJsPmr-28">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="760" y="450" width="290" height="50" as="geometry" />
           </mxCell>
         </object>
         <object label="rating" State="state" id="q68d5dB68wahpiqJsPmr-29">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="920" y="430" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
         <object label="На главную" Button="button" id="q68d5dB68wahpiqJsPmr-30">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="760" y="550" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="q68d5dB68wahpiqJsPmr-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-32" target="q68d5dB68wahpiqJsPmr-33">
+        <mxCell id="q68d5dB68wahpiqJsPmr-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="q68d5dB68wahpiqJsPmr-1" source="q68d5dB68wahpiqJsPmr-32" target="q68d5dB68wahpiqJsPmr-33" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="{RATINGS}" Button="button" id="q68d5dB68wahpiqJsPmr-32">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="760" y="510" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="HOME_DIALOG" StartDialog="start_dialog" id="q68d5dB68wahpiqJsPmr-33">
-          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="1080" y="510" width="200" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="9nVMyrlUef0i2OySYrvu-6" value="Следить за состоянием трекера" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="q68d5dB68wahpiqJsPmr-1">
+        <mxCell id="9nVMyrlUef0i2OySYrvu-6" value="Следить за состоянием трекера" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
           <mxGeometry x="420" y="50" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="q68d5dB68wahpiqJsPmr-41" value="RECORD_DREAM_DIALOG" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="q68d5dB68wahpiqJsPmr-41" value="RECORD_DREAM_DIALOG" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="160" y="-800" width="440" height="440" as="geometry" />
         </mxCell>
         <object label="Постарайтесь вспомнить и описать свой сон:" Window="window" id="q68d5dB68wahpiqJsPmr-61">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="q68d5dB68wahpiqJsPmr-41">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="q68d5dB68wahpiqJsPmr-41" vertex="1">
             <mxGeometry x="80" y="100" width="290" height="50" as="geometry" />
           </mxCell>
         </object>
         <object label="start" State="state" id="q68d5dB68wahpiqJsPmr-63">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-41">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-41" vertex="1">
             <mxGeometry x="240" y="80" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="vgeHuzVfBsbmiKzCboVu-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="q68d5dB68wahpiqJsPmr-41" source="vgeHuzVfBsbmiKzCboVu-1" target="vgeHuzVfBsbmiKzCboVu-2">
+        <mxCell id="vgeHuzVfBsbmiKzCboVu-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="q68d5dB68wahpiqJsPmr-41" source="vgeHuzVfBsbmiKzCboVu-1" target="vgeHuzVfBsbmiKzCboVu-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="" TextInput="text_input" id="vgeHuzVfBsbmiKzCboVu-1">
-          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-41">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="q68d5dB68wahpiqJsPmr-41" vertex="1">
             <mxGeometry x="165" y="160" width="120" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Отлично. Вы можете найти свой сон в вкладке &quot;Мои сновидения&quot;" Window="window" id="vgeHuzVfBsbmiKzCboVu-2">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="q68d5dB68wahpiqJsPmr-41">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="q68d5dB68wahpiqJsPmr-41" vertex="1">
             <mxGeometry x="80" y="300" width="290" height="50" as="geometry" />
           </mxCell>
         </object>
         <object label="done" State="state" id="vgeHuzVfBsbmiKzCboVu-3">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="q68d5dB68wahpiqJsPmr-41">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-41" vertex="1">
             <mxGeometry x="240" y="280" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
         <object label="Закрыть" Button="button" id="vgeHuzVfBsbmiKzCboVu-4">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="q68d5dB68wahpiqJsPmr-41">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="q68d5dB68wahpiqJsPmr-41" vertex="1">
             <mxGeometry x="230" y="360" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Назад" Button="button" id="q68d5dB68wahpiqJsPmr-65">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="q68d5dB68wahpiqJsPmr-41">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="q68d5dB68wahpiqJsPmr-41" vertex="1">
             <mxGeometry x="80" y="200" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="На главную" Button="button" id="9nVMyrlUef0i2OySYrvu-1">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="q68d5dB68wahpiqJsPmr-41">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="q68d5dB68wahpiqJsPmr-41" vertex="1">
             <mxGeometry x="80" y="360" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="vgeHuzVfBsbmiKzCboVu-7" value="DREAMS_DIALOG" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="-800" width="880" height="750" as="geometry" />
+        <mxCell id="vgeHuzVfBsbmiKzCboVu-7" value="DREAMS_DIALOG" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="640" y="-800" width="880" height="970" as="geometry" />
         </mxCell>
         <object label="Календарь ваших снов" Window="window" id="vgeHuzVfBsbmiKzCboVu-8">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="160" y="60" width="290" height="50" as="geometry" />
           </mxCell>
         </object>
         <object label="start" State="state" id="vgeHuzVfBsbmiKzCboVu-9">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="320" y="40" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
         <object label="05.07.2025&lt;div&gt;Качество сна: 4&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;И мне приснилось как я...&lt;/div&gt;" Window="window" id="vgeHuzVfBsbmiKzCboVu-12">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="160" y="270" width="290" height="90" as="geometry" />
           </mxCell>
         </object>
         <object label="dream" State="state" id="vgeHuzVfBsbmiKzCboVu-13">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="320" y="250" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
         <object label="Назад" Button="button" id="vgeHuzVfBsbmiKzCboVu-14">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="310" y="410" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="vgeHuzVfBsbmiKzCboVu-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-16" target="vgeHuzVfBsbmiKzCboVu-12">
+        <mxCell id="vgeHuzVfBsbmiKzCboVu-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-16" target="vgeHuzVfBsbmiKzCboVu-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="vgeHuzVfBsbmiKzCboVu-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-16" target="vgeHuzVfBsbmiKzCboVu-32">
+        <mxCell id="vgeHuzVfBsbmiKzCboVu-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-16" target="vgeHuzVfBsbmiKzCboVu-32" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="vgeHuzVfBsbmiKzCboVu-38" value="Выбран пустой день" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="vgeHuzVfBsbmiKzCboVu-37">
+        <mxCell id="vgeHuzVfBsbmiKzCboVu-38" value="Выбран пустой день" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="vgeHuzVfBsbmiKzCboVu-37" vertex="1" connectable="0">
           <mxGeometry x="0.4745" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <object label="{CALENDAR}" Button="button" id="vgeHuzVfBsbmiKzCboVu-16">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="160" y="120" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Назад" Button="button" id="vgeHuzVfBsbmiKzCboVu-15">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="160" y="160" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="vgeHuzVfBsbmiKzCboVu-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-18" target="vgeHuzVfBsbmiKzCboVu-20">
+        <mxCell id="vgeHuzVfBsbmiKzCboVu-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-18" target="vgeHuzVfBsbmiKzCboVu-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Изменить" Button="button" id="vgeHuzVfBsbmiKzCboVu-18">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="160" y="370" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="На главную" Button="button" id="vgeHuzVfBsbmiKzCboVu-19">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="160" y="410" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
-        <object label="На данный момент, ваш сон звучит так:&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;И мне приснилось как я...&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Скопируйте его, измените и отправте.&lt;/div&gt;" Window="window" id="vgeHuzVfBsbmiKzCboVu-20">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+        <object label="На данный момент, ваш сон звучит так:&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;И мне приснилось как я...&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Скопируйте его, измените и отправьте.&lt;/div&gt;" Window="window" id="vgeHuzVfBsbmiKzCboVu-20">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="160" y="520" width="290" height="100" as="geometry" />
           </mxCell>
         </object>
         <object label="edit" State="state" id="vgeHuzVfBsbmiKzCboVu-21">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="320" y="500" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
+        <mxCell id="8-ZPe5dJWRUrUcTxIM2o-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-22" target="8-ZPe5dJWRUrUcTxIM2o-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <object label="" TextInput="text_input" id="vgeHuzVfBsbmiKzCboVu-22">
-          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="245" y="630" width="120" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="Назад" Button="button" id="vgeHuzVfBsbmiKzCboVu-25">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="310" y="670" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="На главную" Button="button" id="vgeHuzVfBsbmiKzCboVu-26">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="160" y="670" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="05.07.2025&lt;div&gt;На этот день вы не записывали сон.&amp;nbsp;&lt;/div&gt;" Window="window" id="vgeHuzVfBsbmiKzCboVu-32">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="520" y="270" width="290" height="90" as="geometry" />
           </mxCell>
         </object>
         <object label="new_dream" State="state" id="vgeHuzVfBsbmiKzCboVu-33">
-          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="680" y="250" width="100" height="20" as="geometry" />
           </mxCell>
         </object>
         <object label="Назад" Button="button" id="vgeHuzVfBsbmiKzCboVu-34">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="670" y="410" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
-        <mxCell id="vgeHuzVfBsbmiKzCboVu-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-35" target="vgeHuzVfBsbmiKzCboVu-39">
+        <mxCell id="vgeHuzVfBsbmiKzCboVu-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="vgeHuzVfBsbmiKzCboVu-7" source="vgeHuzVfBsbmiKzCboVu-35" target="vgeHuzVfBsbmiKzCboVu-39" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Записать сновидение" Button="button" id="vgeHuzVfBsbmiKzCboVu-35">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="520" y="370" width="290" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="На главную" Button="button" id="vgeHuzVfBsbmiKzCboVu-36">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="520" y="410" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
         <object label="RECORD_DREAM_DIALOG" StartDialog="start_dialog" id="vgeHuzVfBsbmiKzCboVu-39">
-          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+          <mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontStyle=1;" parent="vgeHuzVfBsbmiKzCboVu-7" vertex="1">
             <mxGeometry x="540" y="520" width="250" height="30" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Отлично. Вы можете найти свой сон в вкладке &quot;Мои сновидения&quot;" Window="window" id="8-ZPe5dJWRUrUcTxIM2o-4">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+            <mxGeometry x="160" y="740" width="290" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="done" State="state" id="8-ZPe5dJWRUrUcTxIM2o-5">
+          <mxCell style="shape=loopLimit;whiteSpace=wrap;html=1;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+            <mxGeometry x="320" y="720" width="100" height="20" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="В календарь" Button="button" id="8-ZPe5dJWRUrUcTxIM2o-6">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+            <mxGeometry x="310" y="800" width="140" height="30" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="На главную" Button="button" id="8-ZPe5dJWRUrUcTxIM2o-7">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
+            <mxGeometry x="160" y="800" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
       </root>
