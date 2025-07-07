@@ -7,19 +7,20 @@ from loguru import logger
 
 
 def save_git_diff():
+    run_params = {
+        'capture_output': True,
+        'text': True,
+        'encoding': 'utf-8',
+        'errors': 'replace',  # Обработка проблем с кодировкой
+        'shell': sys.platform == 'win32',  # Используем shell=True только на Windows
+    }
     # Получаем вывод git diff (универсальный способ для всех ОС)
-    result = subprocess.run(
-        ['git', 'diff'],
-        capture_output=True,
-        text=True,
-        encoding='utf-8',
-        errors='replace',  # Обработка проблем с кодировкой
-        shell=sys.platform == 'win32',  # Используем shell=True только на Windows
-    )
+    diff = subprocess.run(['git', 'diff'], **run_params)
+    diff_cached = subprocess.run(['git', 'diff', '--cached'], **run_params)
 
-    if result.returncode != 0:
-        logger.error("Ошибка при выполнении git diff:")
-        logger.error(result.stderr)
+    if diff.returncode != 0 or diff_cached.returncode != 0:
+        logger.error("Ошибка при выполнении git diff или git diff --cached:")
+        logger.error(diff.stderr)
         return
     prompt = (
         "Задача:\n"
@@ -28,10 +29,10 @@ def save_git_diff():
         "{символ каретки для отступа (enter)}\n"
         "{пункты изменений (начинаются с дефиса)}\n"
         "СВОЙ ОТВЕТ НАПИШИ В code формате на русском языке\n\n"
-        "git diff:\n"
     )
-    diff_text = result.stdout
-    full_text = prompt + diff_text
+    diff_text = diff.stdout
+    diff_cached_text = diff_cached.stdout
+    full_text = prompt + f'git diff --cached: {diff_cached_text}' + f'git diff: {diff_text}'
     copy_to_buffer(full_text)
 
 
