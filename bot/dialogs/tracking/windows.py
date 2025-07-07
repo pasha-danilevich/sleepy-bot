@@ -1,19 +1,22 @@
-from datetime import datetime
-
 from aiogram_dialog import Window
-from aiogram_dialog.widgets.kbd import Button, Row, Group, Cancel, Start, SwitchTo, Back
+from aiogram_dialog.widgets.kbd import Back, Button, Cancel, Group, Row, SwitchTo
 from aiogram_dialog.widgets.text import Const, Format
 
+from . import getters, handlers
 from .state import TrackingSG
-from . import handlers
 
 main_window = Window(
     Const("Выберите действие:"),
     Row(
-        SwitchTo(Const("Проснулся"), id="wake_up", state=TrackingSG.wakeup),
-        SwitchTo(Const("Иду спать"), id="go_to_sleep", state=TrackingSG.sleep),
+        SwitchTo(
+            Const("Проснулся"), id="wake_up", state=TrackingSG.wakeup, when='is_sleeping'
+        ),
+        SwitchTo(
+            Const("Иду спать"), id="go_to_sleep", state=TrackingSG.sleep, when='is_awake'
+        ),
     ),
     Cancel(Const("Назад")),
+    getter=getters.get_sleep_state,
     state=TrackingSG.start,
 )
 
@@ -27,7 +30,9 @@ wakeup_window = Window(
     Format("Доброе утро.\nВы спали:"),
     Group(
         Row(
-            Button(Const("Записать сновидение"), id='record', on_click=handlers.start_record_dream),
+            Button(
+                Const("Записать сновидение"), id='record', on_click=handlers.start_record_dream
+            ),
             SwitchTo(Const("Оценить качество сна"), id="rate_sleep", state=TrackingSG.rating),
         ),
         Cancel(Const("На главную")),
@@ -43,9 +48,10 @@ rating_window = Window(
         Button(Const("⭐️⭐️⭐️"), id="rating_3"),
         Button(Const("⭐️⭐️⭐️⭐️"), id="rating_4"),
         Button(Const("⭐️⭐️⭐️⭐️⭐️"), id="rating_5"),
-        Row(Back(Const("Назад")),
-        Cancel(Const("На главную")),),
-
+        Row(
+            Back(Const("Назад")),
+            Cancel(Const("На главную")),
+        ),
     ),
     state=TrackingSG.rating,
 )

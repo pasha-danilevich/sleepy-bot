@@ -100,7 +100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2qzkWoQyIYSuUem1KHMB" name="home">
-    <mxGraphModel dx="1980" dy="3251" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1403" dy="2985" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -252,7 +252,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Иду спать" Button="button" id="q68d5dB68wahpiqJsPmr-4">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="650" y="150" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
@@ -265,7 +265,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <object label="Проснулся" Button="button" id="q68d5dB68wahpiqJsPmr-7">
-          <mxCell style="rounded=1;whiteSpace=wrap;html=1;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="q68d5dB68wahpiqJsPmr-1" vertex="1">
             <mxGeometry x="500" y="150" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
@@ -543,6 +543,41 @@
         <object label="На главную" Button="button" id="8-ZPe5dJWRUrUcTxIM2o-7">
           <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="vgeHuzVfBsbmiKzCboVu-7">
             <mxGeometry x="160" y="800" width="140" height="30" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Пора отходить ко сну" Window="window" id="8-ZPe5dJWRUrUcTxIM2o-14">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="1">
+            <mxGeometry x="1680" y="-1080" width="290" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Иду спать" Button="button" id="8-ZPe5dJWRUrUcTxIM2o-15">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;" vertex="1" parent="1">
+            <mxGeometry x="1830" y="-1020" width="140" height="30" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="На главную" Button="button" id="8-ZPe5dJWRUrUcTxIM2o-18">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+            <mxGeometry x="1680" y="-1020" width="140" height="30" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Доброе утро. Встал уже?" Window="window" id="8-ZPe5dJWRUrUcTxIM2o-19">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=20;spacingRight=10;" vertex="1" parent="1">
+            <mxGeometry x="2035" y="-1080" width="290" height="50" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Да, запиши текущее время" Button="button" id="8-ZPe5dJWRUrUcTxIM2o-20">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;" vertex="1" parent="1">
+            <mxGeometry x="2185" y="-1020" width="140" height="30" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="На главную" Button="button" id="8-ZPe5dJWRUrUcTxIM2o-21">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+            <mxGeometry x="2035" y="-980" width="285" height="30" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Ввести время подъема" Button="button" id="8-ZPe5dJWRUrUcTxIM2o-22">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0;" vertex="1" parent="1">
+            <mxGeometry x="2035" y="-1020" width="140" height="30" as="geometry" />
           </mxCell>
         </object>
       </root>
