@@ -22,8 +22,4 @@ class SleepRecord(BaseTableMixin):
         return f"Сон пользователя {self.user_id} от {self.bedtime.date()}"
 
 
-_SleepRecordPydantic = pydantic_model_creator(SleepRecord)
-
-
-class SleepRecordPydantic(_SleepRecordPydantic):
-    pass
+SleepRecordPydantic = pydantic_model_creator(SleepRecord)
