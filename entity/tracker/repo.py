@@ -1,60 +1,16 @@
-from datetime import datetime
-from typing import Optional, Protocol
+from tortoise.contrib.pydantic import pydantic_model_creator
 
-from pydantic import BaseModel
-
-from infrastructure.db.database import init_db
-from infrastructure.db.repo.mixins import Create, Retrieve, Update
-from infrastructure.db.tables import SleepRecord
+from entity.tracker.dto import CreateSleepRecordDTO, SleepRecordProtocol, UpdateSleepRecordDTO
+from infrastructure.db.repo.crud import CRUDMixin
+from infrastructure.db.tables import SleepRecord, User
 
 
-class CreateSleepRecordDTO(BaseModel):
-    user_id: int
-    bedtime: datetime
+class SRWithUser(pydantic_model_creator(SleepRecord)):
+    user: pydantic_model_creator(User)
 
 
-class UpdateSleepRecordDTO(BaseModel):
-    wakeup_time: datetime
-    dream_text: str
-    sleep_score: int
-
-
-class SleepRecordProtocol(Protocol):
-    id: int
-    user_id: int
-    bedtime: datetime
-    wakeup_time: Optional[datetime]
-    dream_text: Optional[str]
-    sleep_score: Optional[int]
-
-
-class SomeRepo(
-    Retrieve[SleepRecordProtocol],
-    Create[CreateSleepRecordDTO, SleepRecordProtocol],
-    Update[UpdateSleepRecordDTO, SleepRecordProtocol],
+class SleepRecordRepo(
+    CRUDMixin[CreateSleepRecordDTO, SleepRecordProtocol, UpdateSleepRecordDTO]
 ):
     model = SleepRecord
-
-
-async def main():
-    # Тестируем
-    await init_db()
-    repo = SomeRepo()
-    record = await repo.get_by_id(1)
-    print(record.bedtime)
-
-    dto = CreateSleepRecordDTO(user_id=1, bedtime=datetime.now())
-    sleep_record = await repo.create(dto)
-    update_dto = UpdateSleepRecordDTO(
-        wakeup_time=datetime.now(), dream_text='hahaha', sleep_score=5
-    )
-    s = await repo.update(filters={'user_id': 1}, dto=update_dto)
-    print(s, sleep_record)
-    f = await repo.filter({'dream_text': None})
-    print(len(f))
-
-
-if __name__ == "__main__":
-    import asyncio
-
-    asyncio.run(main())
+    pydantic_model = SRWithUser
