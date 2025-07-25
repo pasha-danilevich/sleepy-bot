@@ -1,14 +1,11 @@
 import importlib
 import inspect
-from loguru import logger
 from pathlib import Path
-from typing import Type, List
+from typing import List, Type
 
 from aiogram_dialog import Dialog
 
 from .auto_register import AutoRegister
-
-
 
 
 class DialogCollector:
@@ -28,25 +25,22 @@ class DialogCollector:
 
             else:
                 module_path = py_file.relative_to(package_dir).with_suffix("")
-                module_name = f"{package_path}.{str(module_path).replace('\\', '.')}"
+                module_name = f"{package_path}.{str(module_path).replace('/', '.')}"
 
             # Пропускаем __pycache__ и служебные файлы
-            if any(part.startswith("__") and part != "__init__" for part in module_name.split(".")):
+            if any(
+                part.startswith("__") and part != "__init__" for part in module_name.split(".")
+            ):
                 continue
 
-            try:
-                module = importlib.import_module(module_name)
-                for name, obj in inspect.getmembers(module):
-                    if (
-                        inspect.isclass(obj)
-                        and issubclass(obj, AutoRegister)
-                        and obj != AutoRegister
-                    ):
-                        classes.append(obj)
-            except ImportError as e:
-                logger.warning(f"Could not import {module_name}: {e}")
-            except Exception as e:
-                logger.warning(f"Error processing {module_name}: {e}")
+            module = importlib.import_module(module_name)
+            for name, obj in inspect.getmembers(module):
+                if (
+                    inspect.isclass(obj)
+                    and issubclass(obj, AutoRegister)
+                    and obj != AutoRegister
+                ):
+                    classes.append(obj)
 
         return classes
 

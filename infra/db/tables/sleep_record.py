@@ -1,6 +1,6 @@
 from tortoise import fields
 
-from infrastructure.db.tables.base_mixin import BaseTableMixin
+from infra.db.tables.base_mixin import BaseTableMixin
 
 
 class SleepRecord(BaseTableMixin):

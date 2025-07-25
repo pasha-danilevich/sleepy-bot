@@ -15,8 +15,8 @@ async def on_start(
     manager: DialogManager,
     home_dialog: FromDishka[HomeDialog],
 ) -> None:
-    logger.info('Создаем или обновляем пользователя в Бд')
+    logger.debug('Создаем или обновляем пользователя в Бд')
     user, is_created = '', False
     if not is_created:
-        logger.info('Пользователь есть в БД')
+        logger.debug('Пользователь есть в БД')
         await home_dialog.start(manager, mode=StartMode.RESET_STACK)

@@ -20,7 +20,7 @@ MODULE_TEMPLATE_MAP = {
     'getters': GETTERS,
     'handlers': HANDLERS,
     'state': STATE,
-    'windows': WINDOWS
+    'windows': WINDOWS,
 }
 
 MODULE_TEMPLATE_WITH_DTO_MAP = {
@@ -29,7 +29,7 @@ MODULE_TEMPLATE_WITH_DTO_MAP = {
     'getters': GETTERS_WITH_DTO,
     'handlers': HANDLERS_WITH_DTO,
     'state': STATE,
-    'windows': WINDOWS
+    'windows': WINDOWS,
 }
 
 

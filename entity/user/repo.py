@@ -1,6 +1,6 @@
 from typing import Optional
 
-from infrastructure.db.tables import User
+from infra.db.tables import User
 
 from .dto import UserDTO
 

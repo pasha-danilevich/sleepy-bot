@@ -1,7 +1,7 @@
 from datetime import datetime
 from pprint import pprint
 
-from infrastructure.db.database import init_db
+from infra.db.database import init_db
 
 from .repo import *
 

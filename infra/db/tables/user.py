@@ -1,8 +1,8 @@
 from tortoise import fields
 from tortoise.contrib.pydantic import pydantic_model_creator
 
-from infrastructure.db.tables.active_manager import ActiveManager
-from infrastructure.db.tables.base_mixin import BaseTableMixin
+from infra.db.tables.active_manager import ActiveManager
+from infra.db.tables.base_mixin import BaseTableMixin
 
 
 class User(BaseTableMixin):

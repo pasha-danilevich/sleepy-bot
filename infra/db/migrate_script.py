@@ -5,7 +5,7 @@ from pathlib import Path
 from aerich import Command, models
 from tortoise import Tortoise
 
-from infrastructure.db.database import TORTOISE_ORM
+from infra.db.database import TORTOISE_ORM
 
 PACKAGE_PATH = Path(__file__).parent
 

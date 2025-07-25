@@ -7,15 +7,26 @@ package-mode = false
 
 
 [tool.poetry.dependencies]
-python = "^3.11"
+# Основные зависимости
+python = "^3.13"
+
+# Веб/Боты (Aiogram)
 aiogram = "^3.20.0.post0"
 aiogram-dialog = "^2.3.1"
+
+# Валидация и конфиги (Pydantic)
 pydantic = {extras = ["email"], version = "^2.11.5"}
 pydantic-settings = "^2.9.1"
+
+# База данных (PostgreSQL + ORM)
 asyncpg = "^0.30.0"
 tortoise-orm = "^0.25.0"
 aerich = "^0.9.0"
+
+# Логирование
 loguru = "^0.7.3"
+
+# DI (Dependency Injection)
 dishka = "^1.6.0"
 
 
@@ -24,6 +35,7 @@ black = "^23.9.1"
 isort = "^6.0.1"
 pre-commit = "^4.2.0"
 pyperclip = "^1.9.0"
+gitprompter = "^0.1.0"
 
 
 [build-system]

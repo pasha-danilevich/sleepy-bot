@@ -1,19 +1,23 @@
 import asyncio
+import logging.config
 
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from dishka import make_async_container
 from dishka.integrations.aiogram import setup_dishka
-from loguru import logger
 
-from bot.setup_utils import setup_logging, setup_bot_components
+from bot.setup_utils import setup_bot_components
 from config import Config
-from infrastructure.di.app import get_all_app_providers
-from infrastructure.di.bot import get_all_bot_providers
+from infra.di.app import get_all_app_providers
+from infra.di.bot import get_all_bot_providers
+from infra.logger.setup import get_dict_config
 
 
 async def main():
-    setup_logging()
+    logging.config.dictConfig(get_dict_config())
+
+    logger = logging.getLogger(__name__)
+
     # await init_db()
     config = Config()
 
@@ -25,9 +29,8 @@ async def main():
     container = make_async_container(*get_all_app_providers(), *get_all_bot_providers())
     setup_dishka(container=container, router=dp)
 
-
     bot_name = await bot.get_my_name()
-    logger.success(f'Бот "{bot_name.name}" запущен!')
+    logger.info(f'Бот "{bot_name.name}" запущен!')
 
     await bot.delete_webhook(drop_pending_updates=True)
     try:

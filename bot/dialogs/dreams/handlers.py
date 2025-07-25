@@ -1,12 +1,14 @@
+import logging
 from datetime import date
 
 from aiogram_dialog import DialogManager
 from dishka import FromDishka
 from dishka.integrations.aiogram_dialog import inject
-from loguru import logger
 
 from bot.dialogs.dreams.state import DreamsSG
 from bot.dialogs.record_dream.dialog import RecordDreamDialog
+
+logger = logging.getLogger(__name__)
 
 
 async def on_date_selected(_, __, manager: DialogManager, selected_date: date):

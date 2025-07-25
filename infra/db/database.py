@@ -1,20 +1,21 @@
 import asyncio
+import logging
 from functools import wraps
 
-from loguru import logger
 from tortoise import Tortoise
 from tortoise.exceptions import DBConnectionError
 
 from config import Config
-from infrastructure.di.app.container import container
+from infra.di.app.container import container
 
+logger = logging.getLogger(__name__)
 _config = asyncio.run(container.get(Config))
 
 TORTOISE_ORM = {
     "connections": {"default": _config.default_bd.get_connection_config()},
     "apps": {
         "models": {
-            "models": ['aerich.models', "infrastructure.db.tables"],
+            "models": ['aerich.models', "infra.db.tables"],
             "default_connection": "default",
         },
     },
@@ -41,7 +42,7 @@ async def ping_db():
     try:
         conn = Tortoise.get_connection("default")
         await conn.execute_query("SELECT 1")
-        logger.success("✅ Успешное подключение к PostgreSQL через Tortoise ORM!")
+        logger.info("✅ Успешное подключение к PostgreSQL через Tortoise ORM!")
         return True
     except DBConnectionError as e:
         logger.error(f"❌ Ошибка подключения к базе данных: {e}")

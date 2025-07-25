@@ -1,14 +1,14 @@
 """
 Используйте команду:
-python -m infrastructure.dev.commands.create_dialog --name {name} --folder {folder} --use_dto {(true/false или 1/0)}
+python -m infra.dev.commands.create_dialog --name {name} --folder {folder} --use_dto {(true/false или 1/0)}
 """
 
 
 import argparse
 
 from .script import create_structure
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Создание структуры директорий и файлов.")
     parser.add_argument("--name", type=str, required=True, help="Имя диалога.")
     parser.add_argument(

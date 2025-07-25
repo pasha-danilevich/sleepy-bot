@@ -10,21 +10,20 @@ from bot.core.routing.collector import DialogCollector
 from bot.handlers.commands import router
 from bot.middlewares.register import register_middlewares
 
+logger = logging.getLogger(__name__)
 
-def setup_logging():
-    logging.basicConfig(
-        format="%(name)s - %(levelname)s - %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-        handlers=[logging.StreamHandler()],
-    )
-    logging.getLogger("bot").setLevel(logging.DEBUG)
 
 async def setup_bot_components(dp: Dispatcher) -> None:
     """Настройка всех компонентов бота."""
     # Инициализация диалогов
     dialog_collector = DialogCollector()
     dialogs = dialog_collector.collect('bot')
-    # print(dialogs)
+
+    logger.info(
+        f'Собранные диалоги ({len(dialogs)} шт.):'
+        f' {sorted([dialog.name for dialog in dialogs])}'
+    )
+
     dp.include_routers(router, *dialogs)
 
     # Настройка менеджера диалогов
