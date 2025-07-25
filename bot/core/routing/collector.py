@@ -25,7 +25,7 @@ class DialogCollector:
 
             else:
                 module_path = py_file.relative_to(package_dir).with_suffix("")
-                module_name = f"{package_path}.{str(module_path).replace('/', '.')}"
+                module_name = f"{package_path}.{module_path}".replace("\\", ".")
 
             # Пропускаем __pycache__ и служебные файлы
             if any(
