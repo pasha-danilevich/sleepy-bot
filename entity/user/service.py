@@ -1,16 +1,20 @@
-from .dto import UserDTO
+import logging
+
+from ..tracker.repo import SleepRecordRepo
 from .repo import UserRepo
+
+logger = logging.getLogger(__name__)
 
 
 class UserService:
-    def __init__(
-        self,
-        user_repo: UserRepo,
-    ):
-        self.user_repo = user_repo
+    def __init__(self, user_repo: UserRepo, sleep_record_repo: SleepRecordRepo):
+        self.repo = user_repo
+        self.sleep_record_repo = sleep_record_repo
 
-    async def update_or_create_user(self, user: UserDTO) -> UserDTO:
-        return await self.user_repo.update_or_create_user(user)
+    async def is_user_have_sleep_records(self, user_id: int) -> bool:
+        records = await self.sleep_record_repo.filter({'user_id': user_id})
+        have = True if records else False
 
-    async def get_user(self, user_id: int) -> UserDTO:
-        return await self.user_repo.get_user_by_id(user_id=user_id)
+        logger.debug(f"records count: {len(records)}")
+        logger.debug(f"is_have: {have}")
+        return have

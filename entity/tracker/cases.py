@@ -1,9 +1,9 @@
 from datetime import datetime
 from pprint import pprint
 
+from entity.tracker.dto import CreateSleepRecordDTO, UpdateSleepRecordDTO
+from entity.tracker.repo import SleepRecordRepo
 from infra.db.database import init_db
-
-from .repo import *
 
 
 async def main():

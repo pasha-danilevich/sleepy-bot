@@ -8,8 +8,10 @@ from dishka.integrations.aiogram import setup_dishka
 
 from bot.setup_utils import setup_bot_components
 from config import Config
+from infra.db.database import init_db
 from infra.di.app import get_all_app_providers
 from infra.di.bot import get_all_bot_providers
+from infra.di.entity import get_all_entity_providers
 from infra.logger.setup import get_dict_config
 
 
@@ -18,7 +20,7 @@ async def main():
 
     logger = logging.getLogger(__name__)
 
-    # await init_db()
+    await init_db()
     config = Config()
 
     bot = Bot(token=config.bot.BOT_TOKEN)
@@ -26,7 +28,11 @@ async def main():
     dp = Dispatcher(storage=storage)
     await setup_bot_components(dp)
 
-    container = make_async_container(*get_all_app_providers(), *get_all_bot_providers())
+    container = make_async_container(
+        *get_all_app_providers(),
+        *get_all_bot_providers(),
+        *get_all_entity_providers(),
+    )
     setup_dishka(container=container, router=dp)
 
     bot_name = await bot.get_my_name()

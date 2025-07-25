@@ -4,10 +4,6 @@ from typing import Optional
 from pydantic import BaseModel
 
 
-class SleepRecord(BaseModel):
-    id: int
-
-
 class CreateSleepRecordDTO(BaseModel):
     user_id: int
     bedtime: datetime
@@ -19,7 +15,7 @@ class UpdateSleepRecordDTO(BaseModel):
     sleep_score: int
 
 
-class SleepRecordProtocol(BaseModel):
+class SleepRecordDTO(BaseModel):
     id: int
     user_id: int
     bedtime: datetime

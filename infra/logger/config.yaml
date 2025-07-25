@@ -30,6 +30,14 @@ loggers:
     level: DEBUG
     handlers: [ console ]
     propagate: false
+  entity:
+    level: DEBUG
+    handlers: [ console ]
+    propagate: false
+  infra.db:
+    level: DEBUG
+    handlers: [ console ]
+    propagate: false
 
 
 root:

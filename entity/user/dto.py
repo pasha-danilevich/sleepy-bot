@@ -6,6 +6,21 @@ from pydantic import BaseModel
 
 class UserDTO(BaseModel):
     id: int
+    username: Optional[str]
+    fullname: Optional[str]
+    birthday: Optional[date]
+    age: Optional[int]
+    gender: Optional[int]
+    phone: Optional[str]
+    email: Optional[str]
+
+
+class CreateUserDTO(BaseModel):
+    id: int
+    username: str
+
+
+class UpdateUserDTO(BaseModel):
     username: Optional[str] = None
     fullname: Optional[str] = None
     birthday: Optional[date] = None

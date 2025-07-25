@@ -6,6 +6,7 @@ from aiogram_dialog.widgets.text import Const
 from bot.core.routing.auto_register import AutoRegister
 
 from ...core.dialogs.mixins import SimpleStart
+from .handlers import on_start
 from .state import HomeSG
 from .windows import windows
 
@@ -17,7 +18,7 @@ class HomeDialog(AutoRegister, SimpleStart):
 
     @staticmethod
     def get_dialog() -> Dialog:
-        return Dialog(*windows)
+        return Dialog(*windows, on_start=on_start)
 
     def start_button(self, btn_text: str = 'На главную') -> Start:
         return Start(
