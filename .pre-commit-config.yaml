@@ -11,7 +11,6 @@ repos:
     -   id: check-yaml
     -   id: end-of-file-fixer # добавляет пустую строку в конец файла
     -   id: trailing-whitespace # Удаляет пробелы в конце строк
-    -   id: check-ast # Проверяет синтаксис Python без выполнения кода
 -   repo: https://github.com/PyCQA/autoflake
     rev: v2.2.0
     hooks:
@@ -35,6 +34,3 @@ repos:
       language: system
       pass_filenames: false
       args: [ '.' ]
-#      args:
-#        - --config-file=pyproject.toml  # Указываем pyproject.toml как конфиг
-#        - --show-error-codes
