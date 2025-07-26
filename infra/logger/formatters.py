@@ -49,9 +49,6 @@ class ColorizedFormatter(logging.Formatter):
         func = self.level_name_colors.get(level_no, default)
         return func(level_name)
 
-    def should_use_colors(self) -> bool:
-        return True  # pragma: no cover
-
     def formatMessage(self, record: logging.LogRecord) -> str:
         recordcopy = copy(record)
         levelname = recordcopy.levelname

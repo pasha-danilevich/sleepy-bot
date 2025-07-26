@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from .base import TortoisePydanticBridge
 
 REQUEST_DTO = TypeVar('REQUEST_DTO', bound=BaseModel)
-RESPONSE_PROTOCOL = TypeVar("RESPONSE_PROTOCOL")
+RESPONSE_PROTOCOL = TypeVar("RESPONSE_PROTOCOL", bound=BaseModel)
 
 CREAT_DTO = TypeVar('CREAT_DTO', bound=BaseModel)
 UPDATE_DTO = TypeVar('UPDATE_DTO', bound=BaseModel)

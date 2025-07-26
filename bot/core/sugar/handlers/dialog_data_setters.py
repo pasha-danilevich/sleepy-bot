@@ -11,7 +11,7 @@ from aiogram_dialog.widgets.input import TextInput
 from aiogram_dialog.widgets.input.text import OnSuccess
 from aiogram_dialog.widgets.kbd import Button, Multiselect
 from aiogram_dialog.widgets.kbd.button import OnClick
-from aiogram_dialog.widgets.kbd.select import OnItemClick
+from aiogram_dialog.widgets.kbd.select import OnItemClick, Select
 
 
 class SetterForButton:
@@ -30,7 +30,7 @@ class SetterForButton:
         manager: DialogManager,
         value: Data,
         key: str | int,
-    ):
+    ) -> None:
         manager.dialog_data[key] = value
 
 
@@ -47,8 +47,8 @@ class SetterForSelected:
 
     @staticmethod
     async def _on_select_click(
-        _,
-        __,
+        _: CallbackQuery,
+        __: Select,
         manager: DialogManager,
         item_id: str,
         key: str | int,
@@ -101,7 +101,7 @@ class TextInputWithSetter(TextInput, SetterForSelected):
     def __init__(self, key: str, event_type: Literal['start', 'switch'], state: State):
         super().__init__(
             id=f'text_input_{key}',
-            on_success=self.set_selected_value_and_move(
+            on_success=self.set_selected_value_and_move(  # type: ignore[arg-type]
                 key=key,
                 event_type=event_type,
                 state=state,

@@ -15,7 +15,7 @@ from infra.di.entity import get_all_entity_providers
 from infra.logger.setup import get_dict_config
 
 
-async def main():
+async def main() -> None:
     logging.config.dictConfig(get_dict_config())
 
     logger = logging.getLogger(__name__)

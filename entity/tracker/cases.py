@@ -6,12 +6,13 @@ from entity.tracker.repo import SleepRecordRepo
 from infra.db.database import init_db
 
 
-async def main():
+async def main() -> None:
     # Тестируем
     await init_db()
     repo = SleepRecordRepo()
     record = await repo.get_by_id(1)
-    pprint(record.model_dump())
+    if record:
+        pprint(record.model_dump())
     print('*' * 10)
 
     dto = CreateSleepRecordDTO(user_id=1, bedtime=datetime.now())

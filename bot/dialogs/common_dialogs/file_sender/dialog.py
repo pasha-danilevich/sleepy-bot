@@ -18,7 +18,7 @@ dialog = Dialog(
         Cancel(Const('Закрыть')),
         state=MediaAttachmentSG.start,
     ),
-    on_start=MediaAttachmentHandler.on_start,
+    on_start=MediaAttachmentHandler.on_start,  # type: ignore[arg-type]
 )
 
 

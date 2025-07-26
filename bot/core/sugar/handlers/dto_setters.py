@@ -29,7 +29,7 @@ class SetterForButton:
         manager: DialogManagerWithDTO,
         value: Data,
         attr_name: str,
-    ):
+    ) -> None:
         setattr(manager.dto, attr_name, value)
 
 

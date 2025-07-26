@@ -9,12 +9,20 @@ from .auto_register import AutoRegister
 
 
 class DialogCollector:
+    @staticmethod
+    def _get_dir_package_path(package_path: str) -> Path:
+        package = importlib.import_module(package_path)
+
+        if not package.__file__:
+            raise ValueError(f'Пакет {package.__name__} не имеет файла')
+
+        return Path(package.__file__).parent  # Получаем директорию пакета
+
     @classmethod
     def find_auto_register_classes(cls, package_path: str) -> List[Type[AutoRegister]]:
         """Рекурсивно сканирует пакет и находит все классы, наследующие от AutoRegister."""
         classes = []
-        package = importlib.import_module(package_path)
-        package_dir = Path(package.__file__).parent  # Получаем директорию пакета
+        package_dir = cls._get_dir_package_path(package_path)
         # Рекурсивно ищем все .py-файлы в пакете
         for py_file in package_dir.glob("**/*.py"):
             if py_file.name == "__init__.py":

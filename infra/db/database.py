@@ -1,6 +1,7 @@
 import asyncio
 import logging
 from functools import wraps
+from typing import Any, Awaitable, Callable, TypeVar
 
 from tortoise import Tortoise
 from tortoise.exceptions import DBConnectionError
@@ -23,9 +24,13 @@ TORTOISE_ORM = {
 }
 
 
-def tortoise_connect(func):
+T = TypeVar('T')
+P = TypeVar('P')
+
+
+def tortoise_connect(func: Callable[..., Awaitable[T]]) -> Callable[..., Awaitable[T]]:
     @wraps(func)
-    async def wrapper(*args, **kwargs):
+    async def wrapper(*args: P, **kwargs: Any) -> T:
         try:
             await Tortoise.init(config=TORTOISE_ORM)
             return await func(*args, **kwargs)
@@ -35,7 +40,7 @@ def tortoise_connect(func):
     return wrapper
 
 
-async def ping_db():
+async def ping_db() -> bool:
     """
     Проверяет подключение к базе данных через Tortoise ORM
     """
@@ -52,12 +57,12 @@ async def ping_db():
         return False
 
 
-async def init_db():
+async def init_db() -> None:
     await Tortoise.init(config=TORTOISE_ORM)
     await ping_db()
 
 
-async def main():
+async def main() -> None:
     await init_db()
 
 

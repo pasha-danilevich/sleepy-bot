@@ -13,7 +13,7 @@ class DialogManagerWithDTO(ManagerImpl, Generic[DataTransferObjectType]):
     """
 
     async def set_dialog_dto(self, dto: DataTransferObjectType) -> None:
-        self.current_context().dialog_data['dto'] = dto
+        self.current_context().dialog_data['dto'] = dto  # type: ignore[assignment]
 
     @property
     def dto(self) -> DataTransferObjectType:

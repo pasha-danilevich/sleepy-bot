@@ -5,7 +5,7 @@ from infra.db.tables.base_mixin import BaseTableMixin
 
 class SleepRecord(BaseTableMixin):
     id = fields.BigIntField(pk=True)
-    user = fields.ForeignKeyField('models.User')
+    user = fields.ForeignKeyField('models.User')  # type: ignore[var-annotated]
     bedtime = fields.DatetimeField()  # Время отхода ко сну
     wakeup_time = fields.DatetimeField(null=True)  # Время пробуждения
     dream_text = fields.TextField(null=True)  # Текст сновидения
@@ -17,5 +17,5 @@ class SleepRecord(BaseTableMixin):
         table = "sleeprecord"  # Название таблицы в БД
         indexes = ("user_id",)  # Индекс для быстрого поиска по user_id
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Сон пользователя {self.user.id} от {self.bedtime.date()}"

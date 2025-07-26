@@ -1,7 +1,7 @@
 # logger/setup.py
 import logging
 from pathlib import Path
-from typing import Union
+from typing import Union, cast
 
 import yaml
 
@@ -34,6 +34,6 @@ def get_dict_config() -> dict[str, Union[str, int]]:
         path = base_config_path
 
     with open(path, 'rt') as f:
-        config = yaml.safe_load(f)
+        config = cast(dict[str, Union[str, int]], yaml.safe_load(f))
 
     return config

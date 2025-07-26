@@ -38,6 +38,7 @@ pyperclip = "^1.9.0"
 gitprompter = "^0.1.0"
 pytest = "^8.4.1"
 pytest-asyncio = "^1.1.0"
+mypy = "^1.17.0"
 
 
 [build-system]
@@ -56,3 +57,14 @@ profile = "black"
 line_length = 95
 multi_line_output = 3
 include_trailing_comma = true
+
+[tool.mypy]
+#disable_error_code = import-not-found
+warn_return_any = true # функции должны возвращать конкретные типы
+disallow_untyped_defs = true # сигнатура функций должна быть типизирована
+ignore_missing_imports = true # ингорировать жалобы в роде: не хватает библиотеки types-{lib_name}
+explicit_package_bases = true
+exclude = [
+    "tests/",
+    "infra/db/migrate_script.py",
+]

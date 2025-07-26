@@ -28,7 +28,7 @@ class DynamicButtons(Select):
     ):
         super().__init__(
             text=Format("{item[0]}"),
-            id=f'{on_click.__name__[:-10]}',
+            id=f'{on_click.__name__[:-10]}',  # type: ignore[union-attr]
             item_id_getter=lambda x: x[1],
             items='buttons',
             on_click=on_click,

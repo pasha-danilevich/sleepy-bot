@@ -46,5 +46,5 @@ class App(Base):
 
 class Config(BaseSettings):
     app: App = Field(default_factory=App)
-    bot: Bot = Field(default_factory=Bot)
-    default_bd: DefaultDB = Field(default_factory=DefaultDB)
+    bot: Bot = Field(default_factory=Bot)  # type: ignore[arg-type]
+    default_bd: DefaultDB = Field(default_factory=DefaultDB)  # type: ignore[arg-type]

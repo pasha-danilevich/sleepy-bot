@@ -6,7 +6,7 @@ from .callback_logger import CallbackLoggerMiddleware
 from .errors_middleware import UnknownErrorMiddleware, on_unknown_intent
 
 
-def register_middlewares(dp: Dispatcher):
+def register_middlewares(dp: Dispatcher) -> None:
     dp.callback_query.middleware(UnknownErrorMiddleware())
     dp.callback_query.outer_middleware(CallbackLoggerMiddleware())
 

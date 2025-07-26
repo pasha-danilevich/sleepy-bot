@@ -1,7 +1,9 @@
-from typing import Type
+from typing import Type, TypeVar
 
 from tortoise.contrib.pydantic import PydanticModel, pydantic_model_creator
 from tortoise.models import Model
+
+RESPONSE_PROTOCOL = TypeVar("RESPONSE_PROTOCOL", bound=PydanticModel)
 
 
 class TortoisePydanticBridge:
@@ -14,8 +16,8 @@ class TortoisePydanticBridge:
        с учётом всех связей)
     """
 
-    model: Type[Model] = None
-    pydantic_model: Type[PydanticModel] = None
+    model: Type[Model]
+    pydantic_model: Type[PydanticModel]
 
     def get_model(self) -> Type[Model]:
         assert self.model is not None, f'{self.__class__.__name__}: не указана модель'
@@ -33,5 +35,5 @@ class TortoisePydanticBridge:
             else pydantic_model_creator(self.get_model())
         )
 
-    async def to_pydantic(self, obj: Model) -> PydanticModel:
-        return await self.get_pydantic_model().from_tortoise_orm(obj)
+    async def to_pydantic(self, obj: Model) -> RESPONSE_PROTOCOL:
+        return await self.get_pydantic_model().from_tortoise_orm(obj)  # type: ignore[return-value]

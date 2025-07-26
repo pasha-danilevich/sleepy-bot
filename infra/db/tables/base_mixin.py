@@ -1,29 +1,4 @@
-from typing import Any
-
 from tortoise import fields, models
-
-
-class BaseDBModel(models.Model):
-    async def to_dict(
-        self, exclude: set[str] = None, prefetch: bool = False
-    ) -> dict[str, Any]:
-        d = {}
-        db_fields = self._meta.db_fields
-
-        if exclude is not None:
-            db_fields = db_fields - exclude
-
-        for field in db_fields:
-            d[field] = getattr(self, field)
-
-        if prefetch:
-            for field in self._meta.backward_fk_fields:
-                d[field] = await getattr(self, field).all().values()
-
-        return d
-
-    class Meta:
-        abstract = True
 
 
 class ActualMixin:
@@ -46,5 +21,5 @@ class TimestampMixin:
     )
 
 
-class BaseTableMixin(BaseDBModel, TimestampMixin, ActualMixin):
+class BaseTableMixin(models.Model, TimestampMixin, ActualMixin):
     pass

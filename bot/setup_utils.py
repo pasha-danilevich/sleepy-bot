@@ -17,7 +17,7 @@ async def setup_bot_components(dp: Dispatcher) -> None:
     """Настройка всех компонентов бота."""
     # Инициализация диалогов
     dialog_collector = DialogCollector()
-    dialogs = dialog_collector.collect('bot')
+    dialogs = dialog_collector.collect('bot.dialogs')
 
     logger.info(
         f'Собранные диалоги ({len(dialogs)} шт.):'

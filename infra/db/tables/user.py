@@ -1,5 +1,4 @@
 from tortoise import fields
-from tortoise.contrib.pydantic import pydantic_model_creator
 
 from infra.db.tables.active_manager import ActiveManager
 from infra.db.tables.base_mixin import BaseTableMixin
@@ -20,8 +19,5 @@ class User(BaseTableMixin):
         table_description = 'Пользователи телеграмм бота'
         manager = ActiveManager()
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'<User: {self.id} - {self.username}>'
-
-
-UserPydantic = pydantic_model_creator(User)

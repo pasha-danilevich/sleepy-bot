@@ -12,5 +12,7 @@ router = Router()
 
 @router.message(CommandStart())
 @inject
-async def start_cmd(message: Message, dialog_manager: DialogManager, dialog: FromDishka[StartDialog]):
+async def start_cmd(
+    message: Message, dialog_manager: DialogManager, dialog: FromDishka[StartDialog]
+) -> None:
     await dialog.start(dialog_manager)
