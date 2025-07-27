@@ -1,19 +1,12 @@
-from typing import Any, Dict, Generic, List, Optional, TypeVar, Union
-
-from pydantic import BaseModel
+from typing import Any, Generic, List, Optional
 
 from .base import TortoisePydanticBridge
-
-REQUEST_DTO = TypeVar('REQUEST_DTO', bound=BaseModel)
-RESPONSE_PROTOCOL = TypeVar("RESPONSE_PROTOCOL", bound=BaseModel)
-
-CREAT_DTO = TypeVar('CREAT_DTO', bound=BaseModel)
-UPDATE_DTO = TypeVar('UPDATE_DTO', bound=BaseModel)
+from .types import RESPONSE_PROTOCOL
 
 
-class Create(TortoisePydanticBridge, Generic[CREAT_DTO, RESPONSE_PROTOCOL]):
-    async def create(self, dto: CREAT_DTO) -> RESPONSE_PROTOCOL:
-        obj = await self.get_model().create(**dto.model_dump())
+class Create(TortoisePydanticBridge, Generic[RESPONSE_PROTOCOL]):
+    async def create(self, data: dict[str, Any]) -> RESPONSE_PROTOCOL:
+        obj = await self.get_model().create(**data)
         return await self.to_pydantic(obj)
 
 
@@ -29,19 +22,19 @@ class Retrieve(TortoisePydanticBridge, Generic[RESPONSE_PROTOCOL]):
         objs = await self.get_model().all()
         return [await self.to_pydantic(obj) for obj in objs]
 
-    async def filter(self, filters: Dict[str, Any]) -> List[RESPONSE_PROTOCOL]:
+    async def filter(self, filters: dict[str, Any]) -> List[RESPONSE_PROTOCOL]:
         objs = await self.get_model().filter(**filters)
         return [await self.to_pydantic(obj) for obj in objs]
 
 
-class Update(TortoisePydanticBridge, Generic[UPDATE_DTO, RESPONSE_PROTOCOL]):
-    async def update(self, filters: Dict[str, Any], dto: UPDATE_DTO) -> int:
-        return await self.get_model().filter(**filters).update(**dto.model_dump())
+class Update(TortoisePydanticBridge, Generic[RESPONSE_PROTOCOL]):
+    async def update(self, filters: dict[str, Any], data: dict[str, Any]) -> int:
+        return await self.get_model().filter(**filters).update(**data)
 
     async def update_and_get(
-        self, filters: Dict[str, Any], dto: UPDATE_DTO
+        self, filters: dict[str, Any], data: dict[str, Any]
     ) -> List[RESPONSE_PROTOCOL]:
-        update_count = await self.get_model().filter(**filters).update(**dto.model_dump())
+        update_count = await self.get_model().filter(**filters).update(**data)
 
         if update_count > 0:
             objs = await self.get_model().filter(**filters).all()
@@ -49,16 +42,20 @@ class Update(TortoisePydanticBridge, Generic[UPDATE_DTO, RESPONSE_PROTOCOL]):
         return []
 
     async def update_or_create(
-        self, filters: Dict[str, Any], dto: Union[UPDATE_DTO, CREAT_DTO]
+        self, filters: dict[str, Any], data: dict[str, Any]
     ) -> tuple[RESPONSE_PROTOCOL, bool]:
         obj, is_created = await self.get_model().update_or_create(
-            defaults=dto.model_dump(exclude_none=False, exclude_unset=True),
+            defaults=data,
             **filters,
         )
         return await self.to_pydantic(obj), is_created
 
 
 class Delete(TortoisePydanticBridge):
-    async def delete(self, id: int) -> None:
+    async def delete(self, filters: dict[str, Any]) -> None:
+        obj = await self.get_model().get(**filters)
+        await obj.delete()
+
+    async def delete_by_id(self, id: int) -> None:
         obj = await self.get_model().get(id=id)
         await obj.delete()

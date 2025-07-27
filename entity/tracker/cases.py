@@ -1,7 +1,6 @@
 from datetime import datetime
 from pprint import pprint
 
-from entity.tracker.dto import CreateSleepRecordDTO, UpdateSleepRecordDTO
 from entity.tracker.repo import SleepRecordRepo
 from infra.db.database import init_db
 
@@ -15,16 +14,19 @@ async def main() -> None:
         pprint(record.model_dump())
     print('*' * 10)
 
-    dto = CreateSleepRecordDTO(user_id=1, bedtime=datetime.now())
-    sleep_record, is_created = await repo.update_or_create(filters={'user_id': 1}, dto=dto)
+    sleep_record, is_created = await repo.update_or_create(
+        filters={'user_id': 1},
+        data={'user_id': 1, 'bedtime': datetime.now()},
+    )
+
     pprint(sleep_record.model_dump())
     print(is_created)
     print('*' * 10)
 
-    update_dto = UpdateSleepRecordDTO(
-        wakeup_time=datetime.now(), dream_text='hahaha', sleep_score=5
+    s = await repo.update(
+        filters={'user_id': 1},
+        data={'wakeup_time': datetime.now(), 'dream_text': 'super dream', 'sleep_score': 5},
     )
-    s = await repo.update(filters={'user_id': 1}, dto=update_dto)
     pprint(s)
     print('*' * 10)
 

@@ -1,11 +1,12 @@
 from .mixins import *
+from .types import RESPONSE_PROTOCOL
 
 
 class CRUDMixin(
-    Create[CREAT_DTO, RESPONSE_PROTOCOL],
+    Create[RESPONSE_PROTOCOL],
     Retrieve[RESPONSE_PROTOCOL],
-    Update[UPDATE_DTO, RESPONSE_PROTOCOL],
+    Update[RESPONSE_PROTOCOL],
     Delete,
-    Generic[CREAT_DTO, RESPONSE_PROTOCOL, UPDATE_DTO],
+    Generic[RESPONSE_PROTOCOL],
 ):
     pass

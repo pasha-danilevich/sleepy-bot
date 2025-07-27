@@ -1,9 +1,9 @@
-from typing import Type, TypeVar
+from typing import Type
 
 from tortoise.contrib.pydantic import PydanticModel, pydantic_model_creator
 from tortoise.models import Model
 
-RESPONSE_PROTOCOL = TypeVar("RESPONSE_PROTOCOL", bound=PydanticModel)
+from .types import RESPONSE_PROTOCOL
 
 
 class TortoisePydanticBridge:
