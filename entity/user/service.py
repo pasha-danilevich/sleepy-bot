@@ -13,8 +13,7 @@ class UserService:
 
     async def is_user_have_sleep_records(self, user_id: int) -> bool:
         records = await self.sleep_record_repo.filter({'user_id': user_id})
-        have = True if records else False
+        is_have = True if records else False
 
-        logger.debug(f"records count: {len(records)}")
-        logger.debug(f"is_have: {have}")
-        return have
+        logger.debug(f"{len(records)=} поэтому {is_have=}")
+        return is_have

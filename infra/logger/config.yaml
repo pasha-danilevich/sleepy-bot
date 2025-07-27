@@ -42,6 +42,10 @@ loggers:
     level: DEBUG
     handlers: [ console ]
     propagate: false
+  bot_context_log:
+    level: DEBUG
+    handlers: [ console ]
+    propagate: false
 
 
 root:
