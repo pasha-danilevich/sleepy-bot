@@ -12,7 +12,11 @@ main_window = Window(
             Const("Проснулся"), id="wake_up", state=TrackingSG.wakeup, when='is_sleeping'
         ),
         SwitchTo(
-            Const("Иду спать"), id="go_to_sleep", state=TrackingSG.sleep, when='is_awake'
+            Const("Иду спать"),
+            id="go_to_sleep",
+            state=TrackingSG.sleep,
+            when='is_awake',
+            on_click=handlers.go_to_sleep,
         ),
     ),
     Cancel(Const("Назад")),

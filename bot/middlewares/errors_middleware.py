@@ -1,7 +1,7 @@
 from typing import Any, Awaitable, Callable, Dict, cast
 
-from aiogram import BaseMiddleware, types
-from aiogram.types import ErrorEvent, TelegramObject, Update
+from aiogram import BaseMiddleware, Bot, types
+from aiogram.types import ErrorEvent, Message, TelegramObject, Update
 from aiogram_dialog import DialogManager
 
 
@@ -37,37 +37,38 @@ async def on_unknown_intent(event: ErrorEvent, dialog_manager: DialogManager) ->
 
 class UnknownErrorMiddleware(BaseMiddleware):
     @staticmethod
-    async def _error_response(data: dict, event: TelegramObject) -> None:
-        event = cast(Update, event)
-        bot = data.get("bot")
-        chat_id = None
-        message_id = None
-
+    async def _get_message_info(event: TelegramObject) -> tuple[int, int]:
         # Получаем message из разных типов событий
-        if event.message:
-            chat_id = event.message.chat.id
-            message_id = event.message.message_id
-        elif event.callback_query and event.callback_query.message:
-            chat_id = event.callback_query.message.chat.id
-            message_id = event.callback_query.message.message_id
+        if isinstance(event, Message):
+            message = cast(Message, event)
+            if message:
+                chat_id = message.chat.id
+                message_id = message.message_id
+                return chat_id, message_id
 
-        if bot and chat_id and message_id:
-            try:
-                await bot.edit_message_text(
-                    chat_id=chat_id,
-                    message_id=message_id,
-                    text="⚠️ Что-то пошло не так. Начните заново: /start",
-                    parse_mode="HTML",
-                )
-            except Exception as edit_error:
-                # Если не удалось изменить сообщение, отправляем новое
-                await bot.send_message(
-                    chat_id=chat_id, text="⚠️ Что-то пошло не так. Начните заново: /start"
-                )
-        else:
-            # Если нет данных для редактирования, отправляем новое сообщение
+        elif isinstance(event, Update):
+            event = cast(Update, event)
             if event.message:
-                await event.message.answer("⚠️ Что-то пошло не так. Начните заново: /start")
+                chat_id = event.message.chat.id
+                message_id = event.message.message_id
+                return chat_id, message_id
+
+        raise ValueError('Unknown event')
+
+    @staticmethod
+    async def send_error_msg_to_user(bot: Bot, chat_id: int, message_id: int) -> None:
+        try:
+            await bot.edit_message_text(
+                chat_id=chat_id,
+                message_id=message_id,
+                text="⚠️ Что-то пошло не так. Начните заново: /start",
+                parse_mode="HTML",
+            )
+        except Exception:
+            # Если не удалось изменить сообщение, отправляем новое
+            await bot.send_message(
+                chat_id=chat_id, text="⚠️ Что-то пошло не так. Начните заново: /start"
+            )
 
     async def __call__(
         self,
@@ -77,5 +78,9 @@ class UnknownErrorMiddleware(BaseMiddleware):
     ) -> Any:
         try:
             return await handler(event, data)
-        except Exception as e:
-            return await self._error_response(data, event)
+        except Exception:
+            bot = data["bot"]
+
+            chat_id, message_id = await self._get_message_info(event)
+            await self.send_error_msg_to_user(bot, chat_id, message_id)
+            raise  # в добавок выводим ошибку в консоль

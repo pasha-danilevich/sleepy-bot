@@ -10,6 +10,7 @@ def register_middlewares(dp: Dispatcher) -> None:
     dp.callback_query.middleware(UnknownErrorMiddleware())
     dp.callback_query.middleware(CallbackLoggerMiddleware())
 
+    dp.message.middleware(UnknownErrorMiddleware())
     dp.message.middleware(MessageLoggerMiddleware())
 
     dp.errors.register(
