@@ -9,7 +9,11 @@ main_window = Window(
     Const("Выберите действие:"),
     Row(
         SwitchTo(
-            Const("Проснулся"), id="wake_up", state=TrackingSG.wakeup, when='is_sleeping'
+            Const("Проснулся"),
+            id="wake_up",
+            state=TrackingSG.wakeup,
+            when='is_sleeping',
+            on_click=handlers.on_wakeup,
         ),
         SwitchTo(
             Const("Иду спать"),
@@ -31,7 +35,7 @@ sleep_window = Window(
 )
 
 wakeup_window = Window(
-    Format("Доброе утро.\nВы спали:"),
+    Format("Доброе утро.\nВы спали: {sleep_duration}"),
     Group(
         Row(
             Button(
@@ -42,6 +46,7 @@ wakeup_window = Window(
         Cancel(Const("На главную")),
     ),
     state=TrackingSG.wakeup,
+    getter=getters.get_sleep_duration,
 )
 
 rating_window = Window(

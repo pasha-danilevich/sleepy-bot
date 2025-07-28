@@ -1,4 +1,5 @@
-from datetime import datetime
+from datetime import datetime, timezone
+from typing import cast
 
 from aiogram.types import CallbackQuery
 from aiogram_dialog import DialogManager
@@ -8,6 +9,7 @@ from dishka.integrations.aiogram_dialog import inject
 
 from bot.dialogs.record_dream.dialog import RecordDreamDialog
 from entity.tracker.service import TrackerService
+from entity.tracker.utils import SleepUtils
 
 
 @inject
@@ -27,5 +29,26 @@ async def go_to_sleep(
     user = manager.event.from_user
     if not user:
         raise ValueError('User not found')
-    data = {'user_id': user.id, 'bedtime': datetime.now()}
+
+    data = {'user_id': user.id, 'bedtime': datetime.now(timezone.utc)}
     await service.sleep_record_repo.create(data)
+
+
+@inject
+async def on_wakeup(
+    _: CallbackQuery,
+    __: Button,
+    manager: DialogManager,
+    service: FromDishka[TrackerService],
+) -> None:
+    user = manager.event.from_user
+    if not user:
+        raise ValueError('User not found')
+
+    sleep_record = await service.wakeup(user.id)
+    wakeup_time = cast(datetime, sleep_record.wakeup_time)  # wakeup_time только что создано
+
+    manager.dialog_data['sleep_duration'] = SleepUtils.get_sleep_duration(
+        bedtime=sleep_record.bedtime,
+        wakeup_time=wakeup_time,
+    )
