@@ -23,9 +23,10 @@ class MarkSpecialCalendarDaysView(CalendarDaysView):
 
         special_dates = data.get("special_dates", [])
 
-        if selected_date == today:
+        if selected_date == today and special_dates not in special_dates:
             text = self.today_text
-        elif selected_date in special_dates:  # Проверяем, есть ли дата в списке
+
+        if selected_date in special_dates:  # Проверяем, есть ли дата в списке
             text = self.SPECIAL_DAYS_TEXT
         else:
             text = self.date_text

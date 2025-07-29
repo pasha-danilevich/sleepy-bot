@@ -11,12 +11,18 @@ from dishka.integrations.aiogram_dialog import inject
 from bot.dialogs import record_dream
 from bot.dialogs.dreams.state import DreamsSG
 from bot.dialogs.record_dream.dialog import RecordDreamDialog
+from entity.tracker.service import TrackerService
 
 logger = logging.getLogger(__name__)
 
 
+@inject
 async def on_date_selected(
-    _: ChatEvent, __: ManagedCalendar, manager: DialogManager, selected_date: date
+    _: ChatEvent,
+    __: ManagedCalendar,
+    manager: DialogManager,
+    selected_date: date,
+    service: FromDishka[TrackerService],
 ) -> None:
     manager.dialog_data['selected_date'] = selected_date
     logger.debug('Проверяем, если ли запись со сном в БД')
