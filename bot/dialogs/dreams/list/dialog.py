@@ -1,0 +1,18 @@
+from aiogram.fsm.state import State
+from aiogram_dialog import Dialog
+
+from bot.core.dialogs.mixins import SimpleStart
+from bot.core.routing.auto_register import AutoRegister
+
+from .state import DreamsListSG
+from .windows import windows
+
+
+class DreamsListDialog(AutoRegister, SimpleStart):
+    @property
+    def _start_state(self) -> State:
+        return DreamsListSG.start
+
+    @staticmethod
+    def get_dialog() -> Dialog:
+        return Dialog(*windows)

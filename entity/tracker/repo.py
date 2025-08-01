@@ -1,3 +1,4 @@
+import datetime
 from typing import Optional
 
 from tortoise.contrib.pydantic import pydantic_model_creator
@@ -19,3 +20,12 @@ class SleepRecordRepo(CRUDMixin[SleepRecordDTO]):
         if obj:
             return await self.to_pydantic(obj)
         return None
+
+    async def filter_by_date(self, user_id: int, date: datetime.date) -> list[SleepRecordDTO]:
+        objs = await self.model.filter(
+            user_id=user_id,
+            wakeup_time__year=date.year,
+            wakeup_time__month=date.month,
+            wakeup_time__day=date.day,
+        )
+        return [await self.to_pydantic(obj) for obj in objs]

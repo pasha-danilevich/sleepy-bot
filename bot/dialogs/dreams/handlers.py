@@ -9,6 +9,7 @@ from dishka import FromDishka
 from dishka.integrations.aiogram_dialog import inject
 
 from bot.dialogs import record_dream
+from bot.dialogs.dreams.list.state import DreamsListSG
 from bot.dialogs.dreams.state import DreamsSG
 from bot.dialogs.record_dream.dialog import RecordDreamDialog
 from entity.tracker.service import TrackerService
@@ -24,12 +25,25 @@ async def on_date_selected(
     selected_date: date,
     service: FromDishka[TrackerService],
 ) -> None:
-    manager.dialog_data['selected_date'] = selected_date
     logger.debug('Проверяем, если ли запись со сном в БД')
-    dream = None
-    if dream is not None:
-        await manager.switch_to(DreamsSG.dream)
+    user = manager.event.from_user
+    if not user:
+        raise ValueError("No User")
+
+    manager.dialog_data['selected_date'] = selected_date
+
+    sleep_records = await service.sleep_record_repo.filter_by_date(
+        user_id=user.id, date=selected_date
+    )
+    if sleep_records:
+        if len(sleep_records) == 1:
+            logger.debug('Найдена одна запись')
+            await manager.switch_to(DreamsSG.dream)
+        else:
+            logger.debug('Найдено больше одной записи')
+            await manager.start(DreamsListSG.start, data={'selected_date': selected_date})
     else:
+        logger.debug('Ни одной записи не найдено')
         await manager.switch_to(DreamsSG.new_dream)
 
 
