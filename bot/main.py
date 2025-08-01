@@ -12,11 +12,11 @@ from infra.db.database import init_db
 from infra.di.app import get_all_app_providers
 from infra.di.bot import get_all_bot_providers
 from infra.di.entity import get_all_entity_providers
-from infra.logger.setup import get_dict_config
+from infra.logger.setup import LoggingConfigInitializer
 
 
 async def main() -> None:
-    logging.config.dictConfig(get_dict_config())
+    LoggingConfigInitializer().init()
 
     logger = logging.getLogger(__name__)
 

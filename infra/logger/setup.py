@@ -1,13 +1,15 @@
 # logger/setup.py
 import logging
+import logging.config
 from pathlib import Path
-from typing import Union, cast
+from typing import Optional, Union, cast
 
-import yaml
+import yaml  # type: ignore[import-untyped]
 
 from infra.logger.formatters import ColorizedFormatter
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('logger')
+
 formatter = ColorizedFormatter(
     fmt='%(levelprefix)s %(name)-35s %(message)s', datefmt='%H:%M:%S'
 )
@@ -19,21 +21,19 @@ logger.setLevel(logging.DEBUG)
 logger.addHandler(console_handler)
 
 
-def get_dict_config() -> dict[str, Union[str, int]]:
-    """Получить конфигурацию логгера из YAML файла"""
-    logger.debug("Создаю config для логгера из .yaml")
+class LoggingConfigInitializer:
+    config_path: Path = Path(Path(__file__).parent, 'config.yaml')
 
-    current_path = Path(__file__).parent
-    base_config_path = Path(current_path, 'config.yaml')
-    dev_config_path = Path(current_path, 'dev_config.yaml')
+    @staticmethod
+    def from_yaml(path: Path) -> dict[str, Union[str, int]]:
+        """Получить конфигурацию логгера из YAML файла"""
+        logger.debug(f"Создаю config для логгера из: {path}")
+        with open(path, 'rt') as f:
+            config = cast(dict[str, Union[str, int]], yaml.safe_load(f))
+        return config
 
-    if dev_config_path.exists():
-        path = dev_config_path
-        logger.warning(f'Конфигурационный файл: "dev_config.yaml"')
-    else:
-        path = base_config_path
-
-    with open(path, 'rt') as f:
-        config = cast(dict[str, Union[str, int]], yaml.safe_load(f))
-
-    return config
+    def init(self, config: Optional[dict[str, Union[str, int]]] = None) -> None:
+        if config:
+            logging.config.dictConfig(config)
+        else:
+            logging.config.dictConfig(self.from_yaml(self.config_path))
