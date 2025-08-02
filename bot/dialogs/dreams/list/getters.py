@@ -26,8 +26,12 @@ async def get_dreams(
     sleep_records = await service.sleep_record_repo.filter_by_date(
         user_id=user.id, date=selected_date
     )
+    buttons = []
+    for obj in sleep_records:
+        btn_text = obj.wakeup_time.strftime("%H:%M:%S") if obj.wakeup_time else '[без времени]'
+        buttons.append((btn_text, obj.id))
 
     return {
-        "buttons": [(r.id, r.id) for r in sleep_records],
+        "buttons": buttons,
         "dreams_count": len(sleep_records),
     }

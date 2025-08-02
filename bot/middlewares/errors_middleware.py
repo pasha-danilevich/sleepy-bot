@@ -1,7 +1,7 @@
 from typing import Any, Awaitable, Callable, Dict, cast
 
 from aiogram import BaseMiddleware, Bot, types
-from aiogram.types import ErrorEvent, Message, TelegramObject, Update
+from aiogram.types import CallbackQuery, ErrorEvent, Message, TelegramObject
 from aiogram_dialog import DialogManager
 
 
@@ -46,14 +46,14 @@ class UnknownErrorMiddleware(BaseMiddleware):
                 message_id = message.message_id
                 return chat_id, message_id
 
-        elif isinstance(event, Update):
-            event = cast(Update, event)
+        elif isinstance(event, CallbackQuery):
+            event = cast(CallbackQuery, event)
             if event.message:
                 chat_id = event.message.chat.id
                 message_id = event.message.message_id
                 return chat_id, message_id
 
-        raise ValueError('Unknown event')
+        raise ValueError(f'Unknown event: {type(event)}')
 
     @staticmethod
     async def send_error_msg_to_user(bot: Bot, chat_id: int, message_id: int) -> None:

@@ -1,7 +1,5 @@
 from aiogram.fsm.state import State
-from aiogram_dialog import Dialog, StartMode
-from aiogram_dialog.widgets.kbd import Start
-from aiogram_dialog.widgets.text import Const
+from aiogram_dialog import Dialog
 
 from bot.core.routing.auto_register import AutoRegister
 
@@ -19,11 +17,3 @@ class HomeDialog(AutoRegister, SimpleStart):
     @staticmethod
     def get_dialog() -> Dialog:
         return Dialog(*windows, on_start=on_start)
-
-    def start_button(self, btn_text: str = 'На главную') -> Start:
-        return Start(
-            Const(btn_text),
-            id=f'start_{self.__class__.__name__}',
-            state=self._start_state,
-            mode=StartMode.RESET_STACK,
-        )

@@ -1,16 +1,17 @@
 from aiogram_dialog import Dialog, DialogManager
 
-from ...core.routing.auto_register import AutoRegister
+from bot.core.routing.auto_register import AutoRegister
+
 from . import handlers
-from .state import RecordDreamSG
+from .state import CreateDreamSG
 from .windows import windows
 
 
-class RecordDreamDialog(AutoRegister):
+class CreateDreamDialog(AutoRegister):
     @staticmethod
     def get_dialog() -> Dialog:
         return Dialog(*windows, on_start=handlers.on_start)
 
     @staticmethod
     async def start(manager: DialogManager, data: handlers.StartData) -> None:
-        await manager.start(state=RecordDreamSG.start, data=dict(data))
+        await manager.start(state=CreateDreamSG.start, data=dict(data))

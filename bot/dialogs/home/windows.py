@@ -2,7 +2,8 @@ from aiogram_dialog import Window
 from aiogram_dialog.widgets.kbd import Row
 from aiogram_dialog.widgets.text import Const
 
-from ..dreams.dialog import DreamsDialog
+from bot.dialogs.dreams.calendar.dialog import DreamsDialog
+
 from ..tracking.dialog import TrackingDialog
 from . import getters
 from .state import HomeSG

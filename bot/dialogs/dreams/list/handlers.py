@@ -19,4 +19,7 @@ async def on_dream_select(
     item: str,
     service: FromDishka[TrackerService],
 ) -> None:
-    pass
+    # data = cast(dict[str, Any], manager.dialog_data)
+    # selected_date: datetime.date = sd['selected_date']
+    print(item)
+    raise NotImplementedError()

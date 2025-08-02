@@ -1,8 +1,9 @@
 from aiogram.fsm.state import State
 from aiogram_dialog import Dialog
 
-from ...core.dialogs.mixins import SimpleStart
-from ...core.routing.auto_register import AutoRegister
+from bot.core.dialogs.mixins import SimpleStart
+from bot.core.routing.auto_register import AutoRegister
+
 from .state import DreamsSG
 from .windows import windows
 

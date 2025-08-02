@@ -7,16 +7,13 @@ from aiogram_dialog.widgets.kbd import Button
 from dishka import FromDishka
 from dishka.integrations.aiogram_dialog import inject
 
-from bot.dialogs.record_dream.dialog import RecordDreamDialog
+from bot.dialogs.dreams.create import CreateDreamDialog
 from entity.tracker.service import TrackerService
 from entity.tracker.utils import SleepUtils
 
 
-@inject
-async def start_record_dream(
-    _: CallbackQuery, __: Button, manager: DialogManager, dialog: FromDishka[RecordDreamDialog]
-) -> None:
-    await dialog.start(manager, {'create_date': datetime.now()})
+async def start_record_dream(_: CallbackQuery, __: Button, manager: DialogManager) -> None:
+    await CreateDreamDialog().start(manager, {'create_date': datetime.now()})
 
 
 @inject

@@ -1,8 +1,7 @@
 from dishka import Provider, Scope, provide
 
-from bot.dialogs.dreams.dialog import DreamsDialog
+from bot.dialogs.dreams.calendar.dialog import DreamsDialog
 from bot.dialogs.home.dialog import HomeDialog
-from bot.dialogs.record_dream.dialog import RecordDreamDialog
 from bot.dialogs.start.dialog import StartDialog
 
 
@@ -11,5 +10,4 @@ class DialogProvider(Provider):
 
     home = provide(HomeDialog)
     start = provide(StartDialog)
-    record_dream = provide(RecordDreamDialog)
     dreams = provide(DreamsDialog)
